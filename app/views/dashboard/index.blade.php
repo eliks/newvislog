@@ -6,12 +6,20 @@
         <script src="{{ URL::asset('assets/js/jquery/jquery.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/jquery/jquery.widget.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/metro/metro.min.js') }}"></script>
+        <style>
+        	.metro.notify-container {
+        		top: 50px !important;
+        		right: 30px;
+        	}
+        </style>
     </head>
     <body class="metro" style="min-width: 757px;">
         <nav class="navigation-bar col-md-2" style="margin-bottom: 10px;">
 		    <nav class="navigation-bar-content" style="margin-right: 3%;">
 		        <div class="element">
-		            <a class="brand-" href="#" style="color: white;font-weight: 700;font-size: 20px;">Vislog Dashboard</a>
+		            <a class="brand-" href="#" style="color: white;font-weight: 700;font-size: 20px;">
+						<img width="80" src="../assets/img/vis-logo.png" style="margin-top: -20px;" /> <span>Dashboard</span>
+					</a>
 		        </div>
 		        <ul class="element-menu place-right" style="">
 		            <li>
@@ -399,5 +407,15 @@
 			    });
 			}
 		</script>
+		<script type="text/javascript">
+	    	$(function(){
+			    $.Notify({
+			        content: "<a href='http://vislog.gopagoda.com/vs/{{$name}}'>vislog.gopagoda.com/vs/{{$name}}</a>",
+			        caption: "Find log book for {{$name}} at ",
+			        timeout: 1200000000,
+			        icon: "icon-remove"
+			    });
+			});
+	    </script>
     </body>
 </html>	

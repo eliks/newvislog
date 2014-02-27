@@ -3,7 +3,7 @@
   <head>
     <title>Welcome - Vislog</title>
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="index_assets/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="assets/css/bootstrap-responsive1.css" rel="stylesheet" media="screen">
     <link href="assets/css/styles.css" rel="stylesheet" media="screen">
      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -41,37 +41,37 @@
 		    	<div class="col-md-3"></div>
 				<div class="col-md-5">
 					{{ Form::open(array('url' => 'welcome', 'method'=>'post')) }}
-					<label>Venue Acronym:</label>
+					<label>Venue Acronym (No spaces)</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
                         <!-- <input id="name" type="text" class="form-control" name="name" value="" placeholder="E.g Meltwater Entrepreneurial School of Technology (MEST)">                                         -->
                     	{{ Form::text('name', Input::old('name'), array('class' => 'form-control','placeholder'=>'E.g MEST')) }}
                     </div>
-                    <label>Email Address:</label>
+                    <label>Email Address</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                         <!-- <input id="email" type="text" class="form-control" name="email" value="" placeholder="E.g yourname@somehost.com">  -->
                         {{ Form::text('email', Input::old('email'), array('class' => 'form-control','placeholder'=>'E.g yourname@somehost.com')) }}                                      
                     </div>
-                    <label>Address/Location:</label>
+                    <label>Address/Location</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
                         <!-- <input id="address" type="text" class="form-control" name="address" value="" placeholder="E.g No. Aluguntuguntu street, East-Legon, Accra">  -->
                         {{ Form::text('address', Input::old('address'), array('class' => 'form-control','placeholder'=>'E.g No. Aluguntuguntu street, East-Legon, Accra')) }}                                       
                     </div>
-                    <label>Venue Display Name(Displayed to visitors):</label>
+                    <label>Venue Display Name(Displayed to visitors)</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span>
                         <!-- <input id="display_name" type="text" class="form-control" name="display_name" value="" placeholder="Meltwater Entrepreneurial School of Technology (MEST)"> -->
                         {{ Form::text('display_name', Input::old('display_name'), array('class' => 'form-control','placeholder'=>'Meltwater Entrepreneurial School of Technology (MEST)')) }}                                        
                     </div>
-                    <label>Displayed Welcome Message:</label>
+                    <label>Displayed Welcome Message</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-thumbs-up"></i></span>
                         <!-- <input id="display_welcome" type="text" class="form-control" name="display_welcome" value="" placeholder="E.g You are welcome!">   -->
                         {{ Form::text('display_welcome', Input::old('display_welcome'), array('class' => 'form-control','placeholder'=>'E.g You are welcome!')) }}                                      
                     </div>
-                    <label>Displayed Footer Text:</label>
+                    <label>Displayed Footer Text</label>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-collapse-down"></i></span>
                         <!-- <input id="display_footer" type="text" class="form-control" name="display_footer" value="" placeholder="E.g Visitor's Log for MEST - East Legon Campus"> -->
@@ -88,7 +88,7 @@
 		</div>
 
     </div>
-    <script src="vendors/jquery-1.9.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>

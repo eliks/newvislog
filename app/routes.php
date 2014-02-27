@@ -20,12 +20,9 @@ Route::group(array("before"=>"auth"),function(){
 	
 });
 
-Route::get("/",function(){
-	return Auth::user();
-	$logedin = false;
-	if(Auth::check()) $logedin==true;
-	
-	return "Status: ".$logedin;
+Route::get('/', function()
+{
+	return View::make('index.index');
 });
 
 Route::get('vs/{name}', array('uses'=>'VsController@form'));

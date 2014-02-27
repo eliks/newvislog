@@ -64,8 +64,12 @@ class VsController extends BaseController {
 			$visit->save();
 			
 				}
+		
+		$venue = Venue::where('name', '=', $name)
+						->first();
 			
-		return View::make('form.thanks');
+		return View::make('form.thanks')	
+					->with('venue',$venue);
 	}
 
 	public function dashboard($name)

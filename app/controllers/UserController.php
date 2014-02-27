@@ -91,7 +91,9 @@ class UserController extends BaseController {
 				    // redirect
 					Session::flash('message', 'Successfully Signed in!');
 					
-					return Redirect::to('dashboard/mest');
+					$thisVenue = Venue::where('user_id',Auth::user()->id)->first();
+					
+					return Redirect::to('dashboard/'.$thisVenue->name);
 					
 					} else {
 						Session::flash('message', 'Sorry! Wrong email or password.');
@@ -114,7 +116,7 @@ class UserController extends BaseController {
 
 	public function welcome_submit(){
 			$rules = array(
-			    'name'=>'required|alpha_num|min:3|unique:venues,name,1',
+			    'name'=>'required|alpha_num|min:3|unique:venues,name',
 			   'email'=>'required|email|between:6,40',
 			   'address'=>'required',
 			   'display_name'=>'required',
@@ -149,7 +151,7 @@ class UserController extends BaseController {
 	
 	public function venue_submit(){
 		$rules = array(
-			    'name'=>'required|alpha_num|min:3|unique:venues,name,1',
+			    'name'=>'required|alpha_num|min:3|unique:venues,name',
 			   'email'=>'required|email|between:6,40',
 			   'address'=>'required',
 			   'display_name'=>'required',

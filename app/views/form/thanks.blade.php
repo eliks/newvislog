@@ -22,20 +22,19 @@
 </head>
 <body>
     <div id="mainwrapper">
-    	<div id="brandname">
-    		<div id="lg"></div>
-    		<span>Meltwater Entrepreneurial School of Technology (MEST)</span>
+    	<div id="brandname" style="width: 334px;">
+    		<span>{{$venue->display_name}}</span>
     	</div>
     	<div id="thanks">
-    		<span>Thanks for visiting us, <br />hosting you is our pleasure...</span>
+    		<span>Thanks for using our visitors log, <br />hosting you is our pleasure.</span>
     	</div>
     	<div id="links">
-    		<a href="http://www.meltwater.org/"><span>You can visit our Web Site<br />http://www.meltwater.org/</span></a>
-    		<a href="../../vs/mest"><span>Back to Visitors Log</span></a>
+    		<a href="../../vs/{{$venue->name}}"><span>Back to Visitors Log</span></a><br />
+    		<span style="cursor: inherit;" class="center-block">Visitors Log is powered by <br /><a href="http://vislog.gopagoda.com"><img src="../../assets/img/vis-logo.png" /></a></span>
     	</div>
-    	<div id="ft1">
-    		<span>Visitors Log for MEST - East Legon Campus</span>
-    	'</div>
+    	<div id="ft1" style="margin-top: 20px;">
+    		<span>{{$venue->display_footer}}</span>
+    	</div>
     </div>
 
     <script src="../../assets/js/jquery-latest.js"></script>
